@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng của bạn</title>
+    <!-- FONT GOOGLE -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- BOOTSTRAP 4.5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- VENO BOX : Thư viện thêm Pop Up Video -->
+    <link rel="stylesheet" href="./CSS/venobox.min.css">
+    <!-- OWL CAROUSEL : Thư viện giúp tạo slider  -->
+    <link rel="stylesheet" href="./CSS/owl.carousel.min.css">
+    <link rel="stylesheet" href="./CSS/owl.theme.default.min.css">
+    <!-- Thư viện Animate.css, dùng chung với thư viện WOW.JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Animate On Scroll Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="./CSS/slick.css">
+    <link rel="stylesheet" href="./CSS/slick-theme.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./CSS/index.css">
+    <!-- GIO HANG CSS -->
+    <link rel="stylesheet" href="./gioHang.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="container-md">
+        <p class=" animate__animated animate__bounce animate__delay-1s text-white mb-0">
+            <i class=" fas fa-phone-alt"></i>
+            <a class="phoneNumb" href="tel:0981068631"><span class="ml-3 mr-1 border-right pr-2">098.1068.631</span></a>
+            <!-- THẺ SPAN TẠO SẴN ĐỂ CHÀO MỪNG USER LOG-IN THÀNH CÔNG -->
+            <span class="mx-lg-3 ml-2 pr-2"></span>
+        </p>
+        <nav class="navbar navbar-expand-md">
+            <a class="logo navbar-brand animate__animated animate__fadeInTopLeft animate__delay-0.5s "
+                href="./index.html">
+                Fresh <span class="font-weight-bold">Food.</span>
+            </a>
+            <button class="navbar-toggler animate__animated animate__fadeInTopRight animate__delay-0s " type="button"
+                data-toggle="collapse" data-target="#movieNavBar">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="movieNavBar">
+                <ul class="navbar-nav ml-auto animate__animated animate__fadeInRightBig animate__fast ">
+                    <li class="nav-item active line">
+                        <a class="nav-link" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#GioiThieu">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#SanPham">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#PhanHoi">Phản hồi</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#LienHe">Liên hệ</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link  pay_cart1" href="#GioHang"><i class="fa fa-cart-plus"></i><span
+                                class="ml-2 ml-md-3 pay_cart"></span></a>
+                    </li>
+                    <li class="nav-item line user_icon">
+                        <a class="nav-link user_LogIn" data-toggle="modal" data-target="#myModal" href="#LogIn"><i
+                                class="fa fa-user p_header"></i></a>
+                        <span style="cursor:pointer" class="text-white font-weight-bold hidden Dang_Xuat">Đăng
+                            Xuất</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- THANH CUỘN XUỐNG CỦA HEADER -->
+    <header id="headerFixed">
+        <nav class="navbar container navbar-expand-md">
+            <a class="logo navbar-brand animate__animated animate__fadeInTopLeft animate__delay-0.5s "
+                href="./index.html">
+                Fresh <span class="font-weight-bold">Food.</span>
+            </a>
+            <button class="navbar-toggler animate__animated animate__fadeInTopRight animate__delay-0s " type="button"
+                data-toggle="collapse" data-target="#movieNavBar">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="movieNavBar">
+                <ul class="navbar-nav ml-auto animate__animated animate__fadeInRightBig animate__fast ">
+                    <li class="nav-item active line">
+                        <a class="nav-link" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#GioiThieu">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#SanPham">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#PhanHoi">Phản hồi</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#LienHe">Liên hệ</a>
+                    </li>
+                    <li class="nav-item line ">
+                        <a class="nav-link pay_cart1" href="#GioHang"><i class="fa fa-cart-plus"></i><span
+                                class="ml-2 ml-md-3 pay_cart"></span></a>
+                    </li>
+                    <li class="nav-item line user_icon_header">
+                        <a class="nav-link user_LogIn" data-toggle="modal" data-target="#myModal" href="#LogIn"><i
+                                class="fa fa-user header_user"></i></a>
+                        <span style="cursor:pointer" class="text-white font-weight-bold hidden Dang_Xuat_header">Đăng
+                            Xuất</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- CAROUSEL CHO MÓN CHÍNH -->
+    <section class="movieCarousel">
+        <!-- data-ride="carousel" : Tự động chuyển slide -->
+        <div id="carouselMonChinh" class="carousel slide carousel-fade">
+            <ol class="container carousel-indicators ">
+                <li data-target="#carouselMonChinh" data-slide-to="0"
+                    class="active animate__animated animate__zoomInLeft animate__slow "></li>
+                <li class="animate__animated animate__zoomInLeft animate__slow " data-target="#carouselMonChinh"
+                    data-slide-to="1"></li>
+                <li class="animate__animated animate__zoomInLeft animate__slow " data-target="#carouselMonChinh"
+                    data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="movieCarousel__overlay"></div>
+                    <div class=" container carousel-caption">
+                        <!-- Để giới hạn nội dung của các thẻ,div ta có thể tận dụng class col của bootstrap và kết hợp với responsive  -->
+                        <div class="col-12 col-lg-9">
+                            <!-- Sử dụng thư viện animate,thư viện này sẽ chạy được trên carousel của bootrsap,owl-carousel. Riêng thư viện slick-carousel thì không -->
+                            <h2 class="animate__animated animate__fadeInDown font-weight-bold">CÁNH GÀ CHIÊN NƯỚC MẮM
+                            </h2>
+                            <p class="gioiThieu animate__animated animate__fadeInDown animate__delay-0.5s">Giới thiệu
+                                món ăn</p>
+                            <p class="gioiThieu--NoiDung animate__animated animate__fadeInUp">Cánh Gà Chiên Nước Mắm là
+                                một món ăn gắn liền
+                                với mâm cơm của gia đình người Việt Nam. Nguyên liệu dễ kiếm, thân thuộc, hương vị hấp
+                                dẫn hiếm có.</p>
+                            <div
+                                class="protein col-6 d-lg-block d-none px-0 mb-none mb-md-4 animate__animated animate__backInLeft animate__delay-1s animate__fast">
+                                <p>Thành phần dinh dưỡng
+                                </p>
+                                <div class="row mx-0">
+                                    <div class="col-3">
+                                        <div class="protein__item">
+                                            <p>216</p>
+                                            <span>KKAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="protein__item">
+                                            <p>3,8</p>
+                                            <span>SQRI</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="protein__item">
+                                            <p>9,2</p>
+                                            <span>FAT</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="protein__item">
+                                            <p>15,6</p>
+                                            <span>CARBS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="movieCarousel__trailer animate__animated animate__fadeInUp animate__delay-1s animate__fast">
+
+                                <button class="btn">
+                                    <span>MÓN NGON NỔI BẬT<i class="ml-2 fa fa-play"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="movieCarousel__overlay"></div>
+                    <div class=" container carousel-caption">
+                        <!-- Để giới hạn nội dung của các thẻ,div ta có thể tận dụng class col của bootstrap và kết hợp với responsive  -->
+                        <div class="col-12 col-lg-9">
+                            <!-- Sử dụng thư viện animate,thư viện này sẽ chạy được trên carousel của bootrsap,owl-carousel. Riêng thư viện slick-carousel thì không -->
+                            <h2 class="animate__animated animate__fadeInDown font-weight-bold">CHẢ TRỨNG</h2>
+                            <p class="gioiThieu animate__animated animate__fadeInDown animate__delay-0.5s">Giới thiệu
+                                món ăn</p>
+                            <p class="gioiThieu--NoiDung animate__animated animate__fadeInUp">Chả Trứng là một món ăn
+                                gắn liền
+                                với mâm cơm của gia đình người Việt Nam. Nguyên liệu dễ kiếm, thân thuộc, hương vị hấp
+                                dẫn hiếm có.</p>
+                            <div
+                                class="protein col-6 d-lg-block d-none px-0 mb-none mb-md-4 animate__animated animate__backInLeft animate__delay-1s animate__fast">
+                                <p>Thành phần dinh dưỡng
+                                </p>
+                                <div class="row mx-0">
+                                    <div class="col-3">
+                                        <div class="protein__item">
+                                            <p>220</p>
+                                            <span>KKAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="protein__item">
+                                            <p>5,8</p>
+                                            <span>SQRI</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="protein__item">
+                                            <p>9,7</p>
+                                            <span>FAT</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="protein__item">
+                                            <p>10,6</p>
+                                            <span>CARBS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="movieCarousel__trailer animate__animated animate__fadeInUp animate__delay-1s animate__fast">
+
+                                <button class="btn">
+                                    <span>MÓN NGON NỔI BẬT<i class="ml-2 fa fa-play"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="movieCarousel__overlay"></div>
+                    <div class=" container carousel-caption">
+                        <!-- Để giới hạn nội dung của các thẻ,div ta có thể tận dụng class col của bootstrap và kết hợp với responsive  -->
+                        <div class="col-12 col-lg-9">
+                            <!-- Sử dụng thư viện animate,thư viện này sẽ chạy được trên carousel của bootrsap,owl-carousel. Riêng thư viện slick-carousel thì không -->
+                            <h2 class="animate__animated animate__fadeInDown font-weight-bold">THỊT XÁ XÍU</h2>
+                            <p class="gioiThieu animate__animated animate__fadeInDown animate__delay-0.5s">Giới thiệu
+                                món ăn</p>
+                            <p class="gioiThieu--NoiDung animate__animated animate__fadeInUp">Thịt Xá Xíu là một món ăn
+                                gắn liền
+                                với mâm cơm của gia đình người Việt Nam. Nguyên liệu dễ kiếm, thân thuộc, hương vị hấp
+                                dẫn hiếm có.</p>
+                            <div
+                                class="protein col-6 d-lg-block d-none px-0 mb-none mb-md-4 animate__animated animate__backInLeft animate__delay-1s animate__fast">
+                                <p>Thành phần dinh dưỡng
+                                </p>
+                                <div class="row mx-0">
+                                    <div class="col-3">
+                                        <div class="protein__item">
+                                            <p>315</p>
+                                            <span>KKAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="protein__item">
+                                            <p>7,2</p>
+                                            <span>SQRI</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="protein__item">
+                                            <p>12,6</p>
+                                            <span>FAT</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="protein__item">
+                                            <p>5,5</p>
+                                            <span>CARBS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="movieCarousel__trailer animate__animated animate__fadeInUp animate__delay-1s animate__fast">
+
+                                <button class="btn">
+                                    <span>MÓN NGON NỔI BẬT<i class="ml-2 fa fa-play"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- GIỎ HÀNG CỦA BẠN -->
+    <section class="gioHang section cart_hidden">
+        <div class="container cart_user">
+            <h2>Sản phẩm bạn đã mua</h2>
+            <div class="row gioHang__title border-dark border-bottom py-md-2 mb-md-3">
+                <div class="col-5">
+                    <p>Sản Phẩm</p>
+                </div>
+                <div class="col-7 text-center">
+                    <span>Đơn giá</span>
+                    <span>Số Lượng</span>
+                    <span>Số Tiền</span>
+                    <span>Thao Tác</span>
+                </div>
+            </div>
+            <!-- <div class="row gioHang__content py-md-5 border-dark border-bottom ">
+                <div class="col-5">
+                    <img class="img-fluid" src="./img/Món Chiên.jpg" alt="">
+                    <a href="#">Tên món ăn</a>
+                </div>
+                <div class="col-7 sanPham__GioHang text-center pt-md-5">
+                    <span>70.000đ</span>
+                    <button class="btn border-dark">+</button>
+                    <span class="border-dark px-md-2" style="width:250px">1</span>
+                    <button class="btn border-dark">-</button>
+                    <span class="ml-md-3">70.000đ</span>
+                    <button class="btn btn-success py-3 ">Xóa sản phẩm</button>
+                </div>
+            </div>
+            <div class="row gioHang__content py-md-5 border-dark border-bottom">
+                <div class="col-6">
+                    <img class="img-fluid" src="./img/Món Chiên.jpg" alt="">
+                    <a href="#">Tên món ăn</a>
+                </div>
+                <div class="col-6 sanPham__GioHang text-center pt-md-5">
+                    <button class="btn border-dark">+</button>
+                    <span class="border-dark px-md-3" style="width:250px">1</span>
+                    <button class="btn border-dark">-</button>
+                    <span class="ml-4">70.000đ</span>
+                    <button class="btn btn-success px-2 py-3 ml-3">Xóa sản phẩm</button>
+                </div>
+            </div>
+            <div class="row gioHang__content py-md-5 border-dark border-bottom">
+                <div class="col-6">
+                    <img class="img-fluid" src="./img/Món Chiên.jpg" alt="">
+                    <a href="/monChien.html">Tên món ăn</a>
+                </div>
+                <div class="col-6 sanPham__GioHang text-center pt-md-5">
+                    <button class="btn border-dark">+</button>
+                    <span class="border-dark px-md-3" style="width:250px">1</span>
+                    <button class="btn border-dark">-</button>
+                    <span class="ml-4">70.000đ</span>
+                    <button class="btn btn-success px-2 py-3 ml-3">Xóa sản phẩm</button>
+                </div>
+            </div> -->
+        </div>
+
+
+        <div class="container">
+            <div class="row gioHang__thanhToan py-5 pr-5">
+                <div class="col-6 text-left">
+                    <button class="btn btn-success px-5 py-3 ml-3 w-100 pay_all_foods">Thanh Toán Ngay</button>
+                </div>
+                <div class="col-6 text-right">
+                    <span class="price_all"></span>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </section>
+
+    <section class="gioHang section hidden  thankyou_user">
+        <div class="container history_buy_child_thanks">
+            <div class="row camOn__thanhToan">
+                <div class="col-12 text-center mb-5">
+                    <p class="firstP mt-md-5">Cám ơn bạn đã mua hàng của chúng tôi</p>
+                    <!-- <p class="secondP">Đơn hàng đang được giao tới bạn</p> -->
+                    <h2></h2>
+                </div>
+            </div>
+    </section>
+    </div>
+
+    <section class="gioHang section">
+        <div class="container text-center">
+            <button class="btn btn-success py-2 px-4">Lịch sử thanh toán </button>
+        </div>
+    </section>
+
+    <!-- LỊCH SỬ THANH TOÁN -->
+    <section class="gioHang section  history_buy">
+        <div class="container history_buy_child">
+            <!-- <div class="row camOn__thanhToan">
+                <div class="col-12 text-center mb-5">
+                    <p class="firstP mt-md-5">Cám ơn bạn đã mua hàng của chúng tôi</p>
+                    <p class="secondP">Đơn hàng đang được giao tới bạn</p>
+                    <h2></h2>
+                </div>
+            </div> -->
+
+
+
+            <div class="row gioHang__title border-dark border-bottom py-md-2 mb-md-3">
+                <div class="col-6">
+                    <p>Sản Phẩm</p>
+                </div>
+                <div class="col-6 text-center">
+                    <span>Số Lượng</span>
+                    <span>Số Tiền</span>
+
+                </div>
+            </div>
+            <!-- <div class="row gioHang__content py-md-5 border-dark border-bottom">
+                <div class="col-6">
+                    <img class="img-fluid" src="./img/Món Chiên.jpg" alt="">
+                    <a href="/monChien.html">Tên món ăn</a>
+                </div>
+                <div class="col-6 sanPham__GioHang text-center pt-md-5">
+
+                    <span class="border-dark px-md-3 border" style="width:250px">1</span>
+
+                    <span class="ml-4">70.000đ</span>
+                </div>
+            </div> -->
+
+        </div>
+
+    </section>
+    <!-- LIÊN HỆ VỚI CHÚNG TÔI -->
+    <section id="LienHe" class="LienHe section">
+        <div class="heading">
+            <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+            <p>Healthy Food Makes You Feel Good</p>
+        </div>
+        <div class="LienHe__form pt-md-4 pt-none" data-aos="fade-down" data-aos-offset="100"
+            data-aos-easing="ease-in-out-back">
+            <div class="container">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">First Name</label>
+                            <input type="text" placeholder="Nhập vào tên của bạn" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Last Name</label>
+                            <input type="text" placeholder="Nhập vào họ của bạn" class="form-control"
+                                id="inputPassword4">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="text" placeholder="Nhập vào E-mail của bạn" class="form-control"
+                                id="inputEmail4">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Phone Number</label>
+                            <input type="text" placeholder="Nhập vào số điện thoại của bạn" class="form-control"
+                                id="inputPassword4">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="textareaLienHe">Góp ý của khách hàng</label>
+                            <textarea name="feedBack" class="form-control"
+                                placeholder="Nhập vào góp ý của bạn"></textarea>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <button type="submit" class="btn">GỬI ĐI</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- BẢN ĐỒ -->
+    <section class="map">
+        <div class="heading">
+            <h2>BẢN ĐỒ CỦA CHÚNG TÔI</h2>
+            <p>Healthy Food Makes You Feel Good</p>
+        </div>
+        <div class="BanDo">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.2601677158173!2d105.81413521476316!3d21.022273586001894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab65589cca47%3A0xea9f3ad5fba50153!2sMindX!5e0!3m2!1svi!2s!4v1617945771475!5m2!1svi!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer__content">
+                <div class="row section mx-0">
+                    <div class="col-12 col-md-3 mb-4 mb-md-0">
+                        <h3>GIỚI THIỆU</h3>
+                        <ul>
+                            <li><a href="#">Mục đích ra đời</a></li>
+                            <li><a href="#">Tầm nhìn</a></li>
+                            <li><a href="#">Sứ mệnh</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 mb-4 mb-md-0">
+                        <h3>THỰC ĐƠN</h3>
+                        <ul>
+                            <li><a href="#">Món Kho</a></li>
+                            <li><a href="#">Món Chiên</a></li>
+                            <li><a href="#">Món Xào</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 mb-4 mb-md-0">
+                        <h3>LIÊN HỆ</h3>
+                        <ul>
+                            <li><a href="#">Góp ý với chúng tôi</a></li>
+                            <li><a href="#">Xem đánh giá</a></li>
+                            <li><a href="#">Vị trí</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 ">
+                        <h3>KẾT NỐI NGAY</h3>
+                        <div class="footer__social">
+                            <i class="fab fa-facebook-f"></i>
+                            <a href="#"> Facebook</a>
+                        </div>
+                        <div class="footer__social">
+                            <i class="fab fa-twitter"></i>
+                            <a href="#"> Twitter</a>
+                        </div>
+                        <div class="footer__social">
+                            <i class="fab fa-google-plus-g"></i>
+                            <a href="#"> Google +</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright text-center">
+                <p>2021 © FreshFood Project / <span>Nhóm 2</span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- NÚT Back to Top -->
+    <!-- Back to top : Thành phần đi theo cả website nên sẽ thuộc thẻ cha body -->
+    <a href="#" class="backToTop cd-top text-replace js-cd-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    <!-- Luôn để Modal ở cuối website( dưới footer ) do Modal cần phải phủ hết cả trang,ta dùng kỹ thuật position cho nó với thẻ cha body  -->
+    <!-- MODAL cho phần USER LOGIN -->
+    <div class="modal fade modal--LogIn" id="myModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content ">
+                <div class="container">
+                    <div class="modal-body">
+                        <h5 class="mt-4 text-center"><span>Đăng nhập</span></h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Địa chỉ Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted mt-md-2">Chúng tôi sẽ không bao giờ
+                                    tiết lộ nó cho bất cứ ai.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Mật khẩu</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <div class="text-right mt-md-2">
+                                    <!-- RESET PASS -->
+                                    <a target="_blank"
+                                        href="https://kfcvietnam.com.vn/vi/dat-lai-mat-khau.html"><small>Quên mật
+                                            khẩu?</small></a>
+                                </div>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Ghi nhớ tài khoản</label>
+                            </div>
+                            <button type="submit" class="btn btn--LogIn">ĐĂNG NHẬP</button>
+                            <P class="theP1">Hoặc đăng nhập bằng tài khoản mạng xã hội</P>
+                            <button type="submit" class="btn btn--FB"><i class="fab fa-facebook-f mr-3"></i>ĐĂNG NHẬP
+                                BẰNG FACEBOOK</button>
+                            <p class="mt-4 mb-4 text-dark text-center">
+                                <!-- SIGN UP -->
+                                <img class="mr-2" src="https://kfcvietnam.com.vn/templates/images/question_icon.png">
+                                Bạn chưa có tài khoản Fresh Food?<br>
+                                <a target="_blank" href="./signUp.html"
+                                    class="text-decoration-none text-dark"><u><strong>Đăng ký ngay nào.</strong></u></a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./form.js"></script>
+    <script type="module" src="./giohang.js"></script>
+    <!-- Thư viện Jquery để hỗ trợ chạy các thư viện : BS4,OWL.... -->
+    <!-- Không nên dùng thư viện slim min ( Slim rút gọn code hơn min và nó dành cho thư viện gần đây hoặc phiên bản mới ) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- BS4 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <!-- Back to Top js : Import -->
+    <!-- Cơ chế hoạt động của thư viện : Khi scroll xuống thì thư viện tự động thêm class mới cho button để hiển thị lại -->
+    <script src="./JS/util.js"></script>
+    <script src="./JS/main-backToTop.js"></script>
+    <!-- Main JS : Scroll Header -->
+    <!-- <script>
+        window.onscroll = function () {
+            //Code tạo hiệu ứng xuất hiện thanh màu đen khi scroll
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+            // thuộc tính document.body trả về thẻ <body> thì thuộc tính documentElement sẽ trả về thẻ <html>
+            // element.scrollTop = pixels 
+            // scrollTop : Lấy vị trí hiện tại của thanh trượt xuống của phần tử được chọn. Ở đây sẽ lấy được vị trí trượt xuống của thẻ HTML ; 
+            {
+                // translate(-50%,0)
+                document.getElementById("headerFixed").style.transform = "translate(-50%,0)";
+            } else {
+                document.getElementById("headerFixed").style.transform = "translate(-50%,-100%)";
+            }
+        }
+    </script> -->
+    <!-- OWL CAROUSEL Import -->
+    <script src="./JS/owl.carousel.min.js"></script>
+    <!-- <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                1200: {
+                    items: 3,
+                    loop: false
+                }
+            }
+        })
+    </script> -->
+    <!-- Veno Box -->
+    <script src="./JS/venobox.min.js"></script>
+    <!-- <script>
+        $(document).ready(function () {
+            $('.venobox').venobox();
+        });
+    </script> -->
+    <!-- Thư viện jquery waypoints  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <!-- Counting up number js -->
+    <script src="./JS/jquery.countup.js"></script>
+    <!-- <script>
+        $('.counter').countUp({
+            'time': 1000,
+            'delay': 15
+        });
+    </script> -->
+    <!-- Thư viện AOS dùng khi scroll down -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-quart',
+            anchorPlacement: 'top-bottom'
+        });
+    </script> -->
+    <!-- Thư viện vanilla-tilt tạo hiệu ứng 3d khi hover  -->
+    <script src="./JS/vanilla-tilt.min.js"></script>
+    <!-- <script>
+        VanillaTilt.init(document.querySelectorAll(".MonNgon__card"), {
+            glare: true,
+            reverse: true,
+            "max-glare": 0.7,
+            scale: 1.07,
+        });
+    </script> -->
+    <!-- Thư viện Typed.js giúp tạo hiệu ứng Typing cho chữ -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- <script>
+        $(document).ready(function () {
+            var typed = new Typed('.camOn__thanhToan h2', {
+                strings: ["🛵🛵🛵🛵🛵🛵🛵🛵🛵",],
+                loop: true,
+                typeSpeed: 40,
+                backSpeed: 30,
+                backDelay: 1500,
+                startDelay: 100,
+                fadeOut: true,
+                cursorChar: "_",
+                shuffle: true,
+            });
+        });
+    </script> -->
+    <!-- <script>
+        $(document).ready(function () {
+            var typed = new Typed('.ThanhVien__heading h2', {
+                strings: ["THÀNH VIÊN TRONG NHÓM",],
+                loop: true,
+                typeSpeed: 40,
+                backSpeed: 20,
+                backDelay: 1500,
+                startDelay: 100,
+                fadeOut: true,
+                cursorChar: "_",
+                shuffle: true,
+            });
+        });
+    </script> -->
+</body>
+
+</html>

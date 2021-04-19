@@ -1,0 +1,1073 @@
+/* GLOBAL */
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    /* scroll-behavior: smooth ( Giúp việc trượt xuống các mục mượt mà hơn) */
+    scroll-behavior: smooth;
+}
+html,body {
+    font-family: 'Open Sans', sans-serif;
+    color: #717171;
+}
+.section {
+    padding: 5rem 0;
+}
+/* Tùy chọn màu khi phủ chuột lên 1 vùng nội dung nào đó */
+::selection{
+    background-color:#B48C59;
+    color: white;
+}
+/* line style dùng chung cho 1 số mục của website */
+/* Thẻ After,Before là loại thẻ inline,thẻ inline thì sẽ k set được kích thước */
+.line::after {
+    content: '';
+    width: 0%;
+    height: 4px;
+    display: block;
+    /* Giá trị 1 - Hướng trải màu: 
+        to right: Trái qua phải
+        to left: Phải qua trái
+        to bottom: Trên xuống
+        to top: Dưới lên
+        Giá trị 2 - Màu bắt đầu ( Trái )
+        Giá trị 3 - Màu kết thúc ( Phải )
+        #fbbd61 ( Cam nhạt ) / #ec7532 ( Đậm )   */
+    background:linear-gradient(to right,#97ce45,#44813E);
+    box-shadow: 0 0 20px 0 #58c718;
+    transition: all 0.5s;
+}
+.line:hover::after {
+    width: 100%;
+}
+.line.active::after{
+    width: 100%;
+}
+/* Class dùng chung cho các mục title */
+.title{
+    color: #ec7532;
+    font-size: 1.125rem;
+    border-bottom: 1px solid #d8d8d8;
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    margin-bottom: 40px;
+}
+.title::after{
+    content: '';
+    background: linear-gradient(to right,#92C24C,#44813E);
+    width: 125px;
+    height: 4px;
+    display: block;
+    margin-top: 20px;
+}
+.title--white{
+    color: white;
+    border-bottom: 1px solid #333;
+}
+/* Class dùng chung cho các phần khác nhau trong website gồm section và heading : */
+.section {
+    /* Thiết kế thì thường để khoảng cách trên dưới giữa các phần là từ 70 đến 100px */
+    padding: 6rem 0;
+}
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.heading h2 {
+    font-size: 40px;
+    color: #44813E;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    display: inline;
+}
+.heading p{
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    color: black;
+    font-size: 17px;
+    margin-top: 1rem;
+    text-align: center;
+}
+.heading p::after {
+    content: '';
+    width: 70px;
+    height: 2px;
+    background-color: black;
+    display: block;
+    /* Căn giữa nội dung 1 thẻ ( width < 100% ta dùng margin : auto ) */
+    margin: 20px auto;
+}
+
+/* HEADER */
+header{
+    position: absolute;
+    top:20px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+header p{
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+}
+header .phoneNumb {
+    text-decoration: none;
+    color: white;
+}
+header .phoneNumb:hover {
+    color: white;
+}
+.navbar .logo {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+}
+.navbar .logo
+
+#movieNavBar .navbar-nav {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    
+}
+
+#movieNavBar .navbar-nav .nav-link{
+    color: white;
+    letter-spacing: 2px;
+    line-height: 0.8em;
+    padding: 20px;;
+    
+}
+
+#headerFixed{
+    background-color: #31291d;
+    /* position: fixed; ( ĐI theo thẻ body khi scroll) */
+    position: fixed;
+    top:0;
+    width: 100%;
+    /* kéo ngược thẻ lên trên và để thẻ nằm chính giữa */
+    transform: translate(-50%,-100%);
+    /* Không dùng all vì nó có thể gây ảnh hưởng đến các thuộc tính khác ở trên,sử dụng đúng transform để hiệu ứng kéo trượt mượt mà */
+    transition: transform 0.5s;
+    z-index: 20;
+    box-shadow: 0px 5px 16px 3px rgb(0 0 0 / 33%);
+}
+
+/* CAROUSEL CHO MÓN CHÍNH */
+#carouselMonChinh .carousel-caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+}
+#carouselMonChinh .carousel-item .carousel-caption .gioiThieu {
+    color: #a2da4e;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    animation-delay: 0.5s;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#carouselMonChinh .carousel-item .carousel-caption .gioiThieu--NoiDung {
+    letter-spacing: 1.5px;
+    font-size: 00.875rem;
+    line-height: 1.46rem;
+}
+
+#carouselMonChinh .carousel-item .carousel-caption h2 {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+/* #carouselMovie .carousel-item .carousel-caption p:last-of-type {
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+} */
+.movieCarousel__trailer {
+    display: flex;
+    align-items: center;
+}
+.movieCarousel__trailer>span {
+    /* width: 80px;
+    height: 80px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid white; */
+    font-size: 2rem;
+    text-align: center;
+    /* line-height: 80px; */
+    margin-right: 20px;
+    letter-spacing: 3px;
+    
+}
+.movieCarousel__trailer button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: white;
+    background: linear-gradient(to right, #7ca342,#276821);
+    position: relative;
+    overflow: hidden;
+    outline: none;
+}
+/* Tạo hiệu ứng overlay khi hover cho thẻ button  */
+/* B1: Xây dựng overlay phủ lên thẻ cha ( button ) */
+.movieCarousel__trailer button::before{
+    content: '';
+    width: 110%;
+    height: 100%;
+    /* Khi dùng before,after mà set kích thước phải khai báo nó ở dạng block vì mặc định before,after có display inline */
+    display: block; 
+    background-color: #50bb35;
+    /* Quy tắc của position: absolute là tự động đi kiếm thẻ cha gần nhất có gắn position: relative,đi từng cấp từ trong ra ngoài nếu thẻ cha gần nhất không có relative */
+    /* Thẻ button::before di chuyển,phủ lên trên thẻ cha nên sẽ có position: absolute  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Phải viết 2 tính năng của transform lên cùng 1 hàng để tránh việc bị đè code gây mất transform ở trên */
+    /* Ở đây là vị trí khi chưa hover */
+    transform: skewX(30deg) translateX(-110%);
+    transition: 0.6s;
+}
+/* B2: Di chuyển thẻ con( button::before ) khi hover vào thẻ cha( button ) */
+.movieCarousel__trailer button:hover::before {
+    transform: skewX(30deg) translateX(-10px);
+}
+.movieCarousel__trailer button:hover {
+    color: white;
+}
+/* Thuộc tính z-index chỉ có tác dụng khi đi cùng với position
+thẻ nào có z-index lớn hơn thì nó sẽ hiển thị đè lên thẻ bé hơn */
+.movieCarousel__trailer button span {
+    /* Do nội dung của button( Chữ ) đã ở đúng vị trí,không thay đổi nên nó sẽ có position: relative */
+    position: relative;
+    z-index: 2;
+}
+
+/* Chỉnh phần indicators của carousel : Áp dụng tương tự những thuộc tính của phần caption để indicators và caption thẳng hàng */
+#carouselMonChinh .carousel-indicators {
+    justify-content: flex-start;
+    /* Căn theo chiều ngang để nằm giữa thẻ cha carousel : */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Sửa lại margin tự có của .carousel-indicators :   */
+    margin-left: 0;
+    margin-right: 0;
+    /* Do .carousel-caption được thêm .container (có p-15px) và .col-9 có p-15px nên: */
+    padding-left: 30px;
+    padding-right: 30px;
+    bottom: 30px;
+}
+#carouselMonChinh .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #57c23d;
+    /* đè lại code có sẵn của bs4 : */
+    opacity: 1;
+    box-sizing: border-box;
+    /* Lỗi ở version 4.5 : background-clip - Tạo khoảng hở giữa nội dung với viền, định nghĩa vùng phủ của màu nền  */
+    background-clip: border-box;
+
+}
+#carouselMonChinh .carousel-indicators li.active {
+    background-color: #57c23d;
+}
+.movieCarousel__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,black,transparent) ;
+}
+/* Set chiều cao cố định cho phần carousel ở các loại màn hình để không phải responsive lại chiều cao của carousel */
+#carouselMonChinh {
+    height: 650px;
+}
+/* Để thẻ con có kích thước chiều cao bằng với thẻ cha,set height 100% cho các thẻ con trong phần carousel; thẻ con có đơn vị % luôn đi theo kích thước của thẻ cha gần nhất với nó */
+#carouselMonChinh .carousel-inner {
+    height: 100%;
+}
+#carouselMonChinh .carousel-item {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#carouselMonChinh .carousel-item:first-child {
+    background-image: url(../img/Banner\ 1\ Cánh\ Gà\ Chiên\ Nước\ Mắm.jpg)
+}
+#carouselMonChinh .carousel-item:nth-child(2) {
+    background-image: url(../img/Banner\ 2\ Chả\ Trứng.jpg)
+}
+#carouselMonChinh .carousel-item:nth-child(3) {
+    background-image: url(../img/Banner\ 3\ Thịt\ Xá\ Xíu.jpg) 
+}
+.protein .col-3 {
+    padding: 0px;
+}
+.protein>p {
+    color: #a2da4e;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    animation-delay: 0.5s;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.protein .protein__item p {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+.protein .protein__item span {
+    letter-spacing: 2.5px;
+    font-weight: lighter;
+}
+
+/* GIỚI THIỆU WEB */
+.GioiThieu__content a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+.GioiThieu__content a:hover {
+    color: #44813E;
+}
+.GioiThieu__content h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #61aa30;
+    margin: 1rem 0;
+}
+.GioiThieu__content p {
+    color: #999;
+    margin-top: 1rem;
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+.GioiThieu__content .row:first-child {
+    margin-bottom: 5rem;
+}
+
+/* GIỚI THIỆU THÀNH VIÊN */
+.ThanhVien__col {
+    padding: 2rem;
+}
+.ThanhVien__box {
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 3px 9px 20px 1px rgb(0 0 0 / 14%);
+    transition: all 0.5s;
+}
+.ThanhVien__item img {
+    width: 55%;
+    border-radius: 50%;
+    border: 3.7px solid #61aa30;
+    transition: transform 0.7s;
+}
+.ThanhVien__item img:hover {
+    transform: scale(0.7);
+}
+.ThanhVien__item h3 {
+    color: #61aa30;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+}
+.ThanhVien__item h4 {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem 0 0.2rem;
+}
+.ThanhVien__item p {
+    color: rgb(48, 48, 48);
+    font-size: 1rem;
+    line-height: 1.8em;
+    margin: 10px 0 0;
+    letter-spacing: 1px;
+}
+.ThanhVien__item:hover .ThanhVien__box {
+    transform: translateY(-26px);
+}
+/* SẢN PHẨM : Món Ngon và Đi Chợ */
+.SanPham__content>h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1px;
+    margin: 1.6rem 0;
+}
+.SanPham__content .MonNgon h5 {
+    color: #61aa30;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+    transform: translateZ(40px);
+}
+.SanPham__content .MonNgon p {
+    color: rgb(48, 48, 48);
+    font-size: 1rem;
+    line-height: 1.7em;
+    margin: 10px 0 0;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    transform: translateZ(20px);
+}
+.MonNgon img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.SanPham__content .MonNgon a {
+    padding: 10px 20px;
+    border: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: white;
+    background: linear-gradient(to right, #7ca342,#276821);
+    outline: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    transform: translateZ(60px);
+}
+.SanPham__content .MonNgon__card {
+    border: 3.2px solid #61aa30;
+    border-radius: 15px;
+    /* overflow: hidden; */
+    /* transform-style: preserve-3d; */
+    /* transform: perspective(100px) */
+    box-shadow: 5px 12px 26px 1px rgb(0 0 0 / 17%);
+}
+
+/* DiCho */
+/* .DiCho .owl-carousel {
+    padding: 0 2rem;
+} */
+.DiCho h3 {
+    color: #61aa30;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding-bottom: 12px;
+    padding-right: 1rem;
+}
+.DiCho .item {
+    padding: 0px 1rem;
+    margin-bottom: 3rem;
+}
+.DiCho .item:hover .card--DiCho {
+    transform: translateY(-20px);
+}
+.DiCho .item:hover .card-img--DiCho {
+    transform: translate(-50%,-50%) scale(1.21);
+}
+.card--DiCho {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 2px 15px 18px 1px rgb(0 0 0 / 10%);
+    margin-top: 120px;
+    padding-top: 90px;
+    transition: transform 0.6s;
+}
+.card-img--DiCho {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 165px !important;
+    height: 165px;
+    border: 5px solid #61aa30;
+    transition: transform 0.6s;
+}
+.card--DiCho h5 {
+    color: #61aa30;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+}
+.card--DiCho p {
+    color: rgb(48, 48, 48);
+    font-size: 1rem;
+    line-height: 1.8em;
+    margin: 10px 0 0;
+    letter-spacing: 1px;
+}
+
+.card--DiCho a{
+
+    padding: 10px 20px;
+    border: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: white;
+    background: linear-gradient(to right, #7ca342,#276821);
+    outline: none;
+    font-weight: bold;
+    margin: 1rem 0;
+    transform: translateZ(60px);
+}
+.card--DiCho span {
+    font-weight: bold;
+    margin-top: 1rem;
+    letter-spacing: 1.5px;
+    margin-left: 6px;
+}
+/* Chỉnh phần button của OWl CAROUSEL */
+.DiCho .owl-theme .owl-dots .owl-dot span {
+    background-color: #57c23d;
+    opacity: 0.5;
+}
+.DiCho .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    opacity: 1;
+}
+
+/* HƯỚNG DẪN NẤU ĂN */
+#carouselHuongDan .carousel-caption {
+    top: 10%;
+}
+#carouselHuongDan .carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 34px;
+    height: 34px;
+}
+#carouselHuongDan .carousel-caption .huongDan__title {
+    text-align: left;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #61aa30;
+    padding-bottom: 1rem;
+    margin-bottom: 40px;
+}
+#carouselHuongDan .huongDan__content {
+    text-align: left;
+}
+#carouselHuongDan .huongDan__content .congThuc,.khauPhan {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #61aa30;
+    margin-bottom: 10px;
+}
+#carouselHuongDan .huongDan__content h3 {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.huongDan__nguyenLieu .col-6{
+    font-size: 1rem;
+}
+.huongDan__thoiGian .thoiGian1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.huongDan__thoiGian p {
+    margin-bottom: 10px;
+}
+.huongDan__nguyenLieu p {
+    margin-bottom: 5px;
+}
+.huongDan__nguyenLieu .nguyenLieu {
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+.huongDan__nguyenLieu h4 {
+    font-size: 1.5 rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #61aa30;
+}
+.huongDan__video {
+    position: relative;
+}
+.huongDan__video i {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%) scale(1);
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    color: white;
+    line-height: 80px;
+    border: 4.5px solid #44813E;
+    border-radius: 50%;
+    font-size: 25px;
+    transition: all 0.7s;
+    box-shadow: 0 0 23px 0 #dbe9d2;
+}
+.huongDan__video:hover i {
+    /* Phải viết lại translate vì mặc định nó sẽ để là 0: khiến thẻ không được căn giữa như trên */
+    transform:translate(50%,-50%) scale(1.5);
+}
+
+/* THÀNH QUẢ ĐẠT ĐƯỢC */
+.ThanhQua__content {
+    text-align: center;
+    color: #61aa30;
+}
+.ThanhQua__item i{
+    font-size: 2.5rem;
+}
+.ThanhQua__item h3 {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 30px 0 5px;
+    color: rgb(26, 26, 26);
+}
+.ThanhQua__item p {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+/* PHẢN HỒI CỦA KHÁCH HÀNG */
+.PhanHoi {
+    background: url(/img/Banner\ 4\ Bò\ Hầm\ Rượu\ Vang.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+.PhanHoi__content {
+    box-shadow: 0px 1px 7px #8e8e8e;
+    background-color: rgba(4, 17, 4, 0.56);
+    padding: 2rem;
+    border-radius: 20px;
+}
+.PhanHoi__content .item {
+    color: white;
+    padding: 1rem;
+}
+.PhanHoi__top {
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    background:linear-gradient(125deg, #7ca53e,#1c7212);
+    /* Gắn vị trí cho thẻ cha  */
+    position: relative;
+}
+.PhanHoi__top::after {
+    content: '';
+    /* CSS Triangle : Sử dụng border ( Khi không khai báo width,height,nội dung bên trong thì kích thước của thẻ sẽ phụ thuộc vào border  */
+    border-top: 9px solid#6a8d35;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    position: absolute;
+    top: 100%; 
+    left: 28%;
+}
+.PhanHoi__bottom {
+    display: flex;
+    justify-content: center;
+    /* Khi set width < 100% thì sẽ dư ra khoảng cách ở 2 bên nên kết hợp cùng margin auto để thẻ được căn giữa */
+    width: 55%;
+    margin: 2rem auto 0;
+}
+.PhanHoi__content .PhanHoi__bottom img {
+    width: 28%;
+    /* display: inline-block; */
+}
+.PhanHoi__name {
+    margin-left: 5px;
+}
+.PhanHoi__name p:first-child {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.PhanHoi__name p {
+    margin: 0;
+    color: #9ef068;
+}
+.PhanHoi__content .owl-theme .owl-dots .owl-dot span {
+    background-color: #57c23d;
+    opacity: 0.5;
+}
+.PhanHoi__content .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    opacity: 1;
+}
+.owl-theme .owl-dots .owl-dot:focus {
+    outline: none;
+}
+
+/* LIÊN HỆ VỚI CHÚNG TÔI */
+#Check_DangKi{
+    color: #f33a58;
+}
+#Check_DangNhap{
+    color: #f33a58;
+}
+.hidden{
+    display: none;
+}
+
+.LienHe__form label {
+    font-weight: bold;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: #61aa30;
+}
+.LienHe__form input::placeholder,.LienHe__form textarea::placeholder{
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+.LienHe__form .form-control:focus {
+    box-shadow: 0 0 0 0.15rem #cdf394;
+}
+.LienHe__form textarea {
+    resize: none;
+}
+.LienHe__form button {
+    padding: 10px 30px;
+    background-color: #44813E;
+    border-color: #44813E;
+    color: white;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+}
+.LienHe__form button:hover {
+    background-color: black;
+    color: white;
+}
+.form-message {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+    color: #f33a58;
+}
+
+/* BẢN ĐỒ */
+.BanDo iframe {
+    width: 100%;
+}
+
+/* FOOTER */
+footer {
+    background-color: #31291d;
+}
+footer h3 {
+    font-size: 16px;
+    color: #87b345;
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+footer li {
+    list-style: none;
+}
+footer a {
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 3px 0;
+    transition: all 0.8s;
+}
+footer a:hover {
+    color: #87b345;
+    text-decoration: none;
+}
+.footer__social {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+}
+.footer__social i{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #4b4b50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 1rem;
+    font-size: 12px;
+}
+.footer__copyright {
+    border-top: 2px solid rgba(255,255,255,0.12);
+    color: white;
+    padding: 1rem 0;
+}
+.footer__copyright p {
+    margin-bottom: 0px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
+.footer__copyright span {
+    color: #87b345;
+    font-weight: bold;
+}
+
+/* BACK TO TOP */
+.backToTop{
+    /* position: fixed; ( ĐI theo thẻ body khi scroll) */
+    right: 50px;
+    bottom: 50px;
+    position: fixed;
+    /* opacity: 0; ( Thẻ vẫn hiện trên web,chỉ trong suốt) */
+    /* visibility: hidden; ( Ẩn về mặt nội dung,k Tab đc) */
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+}
+/* Giúp button hiện lại khi scroll xuống */
+.cd-top--is-visible { 
+    visibility: visible;
+    opacity: 1;
+}
+.backToTop i {
+    background: linear-gradient(to right,#97ce45,#44813E);
+    color: white;
+    border: 2px solid linear-gradient(to top,#97ce45,#44813E);
+    width: 38px;
+    height: 38px;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 20px 1px rgb(0 0 0 / 28%);
+}
+
+/* MODAL USER LOGIN */
+.modal--LogIn .modal-body {
+    padding: 2rem 4rem;
+}
+.modal--LogIn h5 {
+    font-size: 38px;
+    color: #61aa30;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.modal--LogIn label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+.modal--LogIn .btn--LogIn {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #61aa30;
+    border-color: #61aa30;
+    color: white;
+    letter-spacing: 1px;
+    box-shadow: 3px 9px 15px 1px rgb(0 0 0 / 15%);
+}
+.modal--LogIn .btn--FB {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #3c5a9a;
+    border-color: #3c5a9a;
+    color: white;
+    letter-spacing: 1px;
+    box-shadow: 3px 9px 15px 1px rgb(0 0 0 / 15%);
+}
+.modal--LogIn .theP1 {
+    font-size: 14px;
+    color: rgb(112, 112, 112);
+    line-height: 1.2;
+    padding: 1rem .5rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+
+
+
+/* RESPONSIVE Ở GIAO DIỆN MOBILE */
+/* HEADER */
+@media screen and (max-width:575.98px){
+    header p {
+        text-align: center!important;
+        font-size: 3.2vw;
+    }
+    header .navbar-toggler-icon {
+        color: white;
+        line-height: 1.5em;
+    }
+    header .navbar-toggler {
+        color: #61aa30;
+    }
+    header .navbar-toggler:focus{
+        outline: none;
+    }
+    header .navbar-collapse {
+        background-color: #101010;
+        text-align: center;
+        padding: 1rem 2rem;
+        border-radius: 15px;
+        
+    }
+    #movieNavBar .navbar-nav .active .nav-link {
+        color: #61aa30;
+    }
+    .line.active::after {
+        width: 0%;
+    }
+}
+
+/* CAROUSEL CHO MÓN CHÍNH */
+@media screen and (max-width:575.98px){
+    #carouselMonChinh .carousel-item .carousel-caption h2 {
+        font-size: 7vw;
+        line-height: 10vw;
+        margin-bottom: 10px;
+    }
+    .movieCarousel__trailer button {
+        padding: 8px 16px;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+        color: white;
+        background: linear-gradient(to right, #7ca342,#276821);
+    }
+    .movieCarousel__trailer {
+        margin-top: 1.5rem;
+    }
+    #carouselMonChinh .carousel-indicators {
+        bottom: 50px;
+    }
+}
+
+/* GIỚI THIỆU THÀNH VIÊN */
+@media screen and (max-width:575.98px){
+    .ThanhVien__item h3 {
+        font-size: 6vw;
+        margin-top: 1rem;
+        margin-bottom: 00.7rem;
+    }
+    .ThanhVien__item h4 {
+        font-size: 4vw;
+        margin: 0.5rem 0 0.2rem;
+    }
+    .ThanhVien__item p {
+        
+        font-size: 3.7vw;
+        line-height: 1.8em;
+        margin: 10px 0 0;
+        letter-spacing: 1.2px;
+    }
+}
+
+/* SẢN PHẨM : Món Ngon và Đi Chợ */
+@media screen and (max-width:575.98px){
+    /* .MonNgon .col-4 {
+        padding: 6px;
+    } */
+    .SanPham__content>h2 {
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+    .SanPham__content .card-body {
+        padding: 8px;
+    }
+    .SanPham__content .MonNgon h5 {
+        font-size: 1rem;
+        margin: 0.8rem 0;
+        /* transform: translateZ(40px); */
+    }
+    .SanPham__content .MonNgon p {
+        font-size: 0.8rem;
+        line-height: 1.6em;
+        margin: 10px 0 0;
+        margin-bottom: 10px;
+        /* transform: translateZ(20px); */
+    }
+    .SanPham__content .MonNgon a {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        color: white;
+        margin-bottom: 0.5rem;
+        /* transform: translateZ(60px); */
+    }
+
+}
+
+/* HƯỚNG DẪN NẤU ĂN */
+@media screen and (max-width:575.98px){
+    #carouselHuongDan .carousel-caption {
+        top: 0%;
+    }
+    #carouselHuongDan .carousel-caption .huongDan__title {
+        font-size: 3.2vw;
+        margin-bottom: 0px;
+        padding-bottom: 6px;
+    }
+    .huongDan__video {
+        width: 75%;
+        margin: 0 auto;
+    }
+    .huongDan__video i {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #44813E;
+        line-height: 40px;
+        font-size: 15px;
+    }
+}
+
+/* THÀNH QUẢ ĐẠT ĐƯỢC */
+@media screen and (max-width:575.98px){
+    .heading h2 {
+        font-size: 5.5vw;
+    }
+    .heading p {
+    letter-spacing: 2px;
+    font-size: 3.6vw;
+    margin-top: 1rem;
+    }
+    .ThanhQua__item {
+        margin-bottom: 2rem;
+    }
+}
+
+/* PHẢN HỒI CỦA KHÁCH HÀNG */
+@media screen and (max-width:575.98px){
+    .PhanHoi__bottom {
+        width: 75%;
+    }
+    .ThanhQua__item h3 {
+        margin-top: 1rem;
+        font-size: 4.5vw;
+    }
+}
+
+/* FOOTER */
+@media screen and (max-width:575.98px){
+    .section {
+        padding: 4.5rem 0;
+    }
+    .footer__content li {
+        margin-bottom: 10px;
+    }
+}
+
+/* BACK TO TOP : Thu nhỏ lại nút này */
+@media screen and (max-width:575.98px){
+    /* Chỉnh lại vị trí và kích thước cho nút backToTop */
+    .backToTop {
+        right: 15px;
+        bottom: 75px;
+    }
+    .backToTop i {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+        line-height: 35px;
+    }
+}

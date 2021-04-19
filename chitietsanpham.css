@@ -1,0 +1,44 @@
+.chiTiet__SP .chiTiet--heading {
+    color: #61aa30;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    padding-bottom: 12px;
+    padding-right: 1rem;
+}
+.chiTiet__content {
+    box-shadow: 2px 15px 18px 1px rgb(0 0 0 / 10%);
+    padding: 3rem 4rem;
+}
+.chiTiet__img {
+    /* padding-top: 10rem ; */
+    box-shadow: 2px 15px 25px 1px rgb(0 0 0 / 12%);
+}
+.chiTiet__content h2 {
+    font-size: 3.23rem;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.33;
+}
+.chiTiet__content .gioiThieu {
+    color: #61aa30;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.chiTiet__content .gioiThieu1 {
+    color:brown;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.chiTiet__content .gioiThieu--NoiDung {
+    font-size: 1rem;
+    color: rgb(112, 112, 112);
+    letter-spacing: 1.5px;
+}
+.protein>p {
+    color: #61aa30!important;
+}

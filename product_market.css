@@ -1,0 +1,53 @@
+/* #carouselMonChinh .carousel-item.monKho {
+    background-image: url(./img/Món\ Chiên.jpg)
+} */
+.searchBar {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+}
+.searchBar .card  {
+    box-shadow: 5px 12px 30px 1px rgb(0 0 0 / 15%);
+}
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.sapXepTheoGia a {
+    color: #61aa30;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.GoiY .GoiY__heading p {
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    color: black;
+    font-size: 17px;
+    margin-top: 1rem;
+    text-align: center;
+}
+.GoiY .GoiY__heading h2 {
+    font-size: 40px;
+    color: rgb(68, 129, 62);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 4rem;
+}
+.GoiY__content h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #61aa30;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+}
+.GoiY__content .col-md-6 {
+   padding: 2.5rem 3.5rem;
+}
+.ThanhVien__box:hover {
+    transform: translateY(-28px) scale(1.1);
+}

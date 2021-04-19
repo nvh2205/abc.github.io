@@ -1,0 +1,68 @@
+.gioHang h2 {
+    color: #61aa30;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding-bottom: 12px;
+    padding-right: 1rem;
+}
+.gioHang__title span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(122, 122, 122);
+    letter-spacing: 1px;
+    padding: 1rem 0.9rem;
+}
+.gioHang__title p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+}
+.gioHang__content a {
+    color: #61aa30;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 1.5rem 0;
+}
+.gioHang__content span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(122, 122, 122);
+    letter-spacing: 1px;
+    /* padding: 1rem 2rem; */
+}
+.gioHang__thanhToan span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #61aa30;
+    letter-spacing: 1px;
+    padding-top: 1rem ;
+}
+.camOn__thanhToan .firstP {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #61aa30;
+    margin-bottom: 10px;
+}
+.camOn__thanhToan .secondP {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 1rem;
+    letter-spacing: 2px;
+}
+.camOn__thanhToan h2 {
+    font-size: 3rem;
+    display: inline;
+    margin-bottom: 2rem;;
+}
+.sanPham__GioHang span {
+    padding: 0px 10px;
+}
